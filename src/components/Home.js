@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Lottie from 'lottie-react';
 import exams from '../asset/exams.json';
 import { Link } from 'react-router-dom';
+import { QuizContext } from './Root';
+import Topics from './Topics';
 
 const Home = () => {
+   const quizeData = useContext(QuizContext);
+   const quizes = quizeData.data;
+   console.log(quizes);
    return (
       <div>
          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">
@@ -27,46 +32,6 @@ const Home = () => {
                         className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-teal-500 hover:bg-teal-700 focus:shadow-outline focus:outline-none"
                      >
                         <span className="mr-3">Learn More</span>
-                        <svg
-                           width="24"
-                           height="24"
-                           viewBox="0 0 24 24"
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth="2"
-                           className="w-4"
-                        >
-                           <polyline
-                              fill="none"
-                              stroke="currentColor"
-                              strokeMiterlimit="10"
-                              points="4,4 22,4 19,14 4,14 "
-                           />
-                           <circle
-                              cx="4"
-                              cy="22"
-                              r="2"
-                              strokeLinejoin="miter"
-                              strokeLinecap="square"
-                              stroke="none"
-                              fill="currentColor"
-                           />
-                           <circle
-                              cx="20"
-                              cy="22"
-                              r="2"
-                              strokeLinejoin="miter"
-                              strokeLinecap="square"
-                              stroke="none"
-                              fill="currentColor"
-                           />
-                           <polyline
-                              fill="none"
-                              stroke="currentColor"
-                              strokeMiterlimit="10"
-                              points="1,1 4,4 4,14 2,18 23,18 "
-                           />
-                        </svg>
                      </Link>
                   </div>
                </div>
@@ -75,6 +40,13 @@ const Home = () => {
                      <Lottie animationData={exams} loop={true} />
                   </div>
                </div>
+            </div>
+         </div>
+         <div className="max-w-screen-xl p-5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-28">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-4 sm:grid-cols-2">
+               {quizes.map((quiz) => (
+                  <Topics key={quiz.id} quiz={quiz}></Topics>
+               ))}
             </div>
          </div>
       </div>

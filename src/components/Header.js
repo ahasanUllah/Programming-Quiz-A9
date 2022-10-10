@@ -82,23 +82,9 @@ const Header = () => {
                            <div className="flex items-center justify-between mb-4">
                               <div>
                                  <a href="/" aria-label="Company" title="Company" className="inline-flex items-center">
-                                    <svg
-                                       className="w-8 text-deep-purple-accent-400"
-                                       viewBox="0 0 24 24"
-                                       strokeLinejoin="round"
-                                       strokeWidth="2"
-                                       strokeLinecap="round"
-                                       strokeMiterlimit="10"
-                                       stroke="currentColor"
-                                       fill="none"
-                                    >
-                                       <rect x="3" y="1" width="7" height="12" />
-                                       <rect x="3" y="17" width="7" height="6" />
-                                       <rect x="14" y="1" width="7" height="6" />
-                                       <rect x="14" y="11" width="7" height="12" />
-                                    </svg>
-                                    <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                       Company
+                                    <img className="w-6" src="logo.png" alt="" />
+                                    <span className="ml-2 text-sm font-bold tracking-wide text-gray-800 uppercase">
+                                       ProgrammingQuize
                                     </span>
                                  </a>
                               </div>
@@ -121,44 +107,44 @@ const Header = () => {
                            <nav>
                               <ul className="space-y-4">
                                  <li>
-                                    <a
-                                       href="/"
+                                    <Link
+                                       to="/"
                                        aria-label="Our product"
                                        title="Our product"
                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                     >
-                                       Product
-                                    </a>
+                                       Home
+                                    </Link>
                                  </li>
                                  <li>
-                                    <a
-                                       href="/"
+                                    <Link
+                                       to="/statistics"
                                        aria-label="Our product"
                                        title="Our product"
                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                     >
-                                       Features
-                                    </a>
+                                       Statistics
+                                    </Link>
                                  </li>
                                  <li>
-                                    <a
-                                       href="/"
+                                    <Link
+                                       to="/Blog"
                                        aria-label="Product pricing"
                                        title="Product pricing"
                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                     >
-                                       Pricing
-                                    </a>
+                                       Blog
+                                    </Link>
                                  </li>
                                  <li>
-                                    <a
-                                       href="/"
+                                    <Link
+                                       to="/about"
                                        aria-label="About us"
                                        title="About us"
                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                     >
                                        About us
-                                    </a>
+                                    </Link>
                                  </li>
                               </ul>
                            </nav>
