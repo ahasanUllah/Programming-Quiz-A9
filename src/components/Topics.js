@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Topics = ({ quiz }) => {
    const { id, name, logo, total } = quiz;
+   const navigate = useNavigate();
+   const handleQuizeTopics = (id) => {
+      navigate(`/quiz/${id}`);
+   };
    return (
       <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
          <img
@@ -15,6 +20,7 @@ const Topics = ({ quiz }) => {
                <p className="dark:text-gray-100">Quiz: {total}</p>
             </div>
             <button
+               onClick={() => handleQuizeTopics(id)}
                type="button"
                className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-teal-500 text-gray-100"
             >
