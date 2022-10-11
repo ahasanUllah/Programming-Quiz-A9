@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ScoreContext } from './Root';
 
 const Topics = ({ quiz }) => {
+   const [score, setScore] = useContext(ScoreContext);
    const { id, name, logo, total } = quiz;
    const navigate = useNavigate();
    const handleQuizeTopics = (id) => {
       navigate(`/quiz/${id}`);
+      setScore(0);
    };
    return (
       <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
