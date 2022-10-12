@@ -71,12 +71,11 @@ const Questions = ({ question, index }) => {
                   {option}
                </Option>
             ))}
+            <h2 className={`${toggle ? 'inline' : 'hidden'} lg:text-xl bg-teal-200  lg:p-6 rounded  `}>
+               Answer: {correctAnswer}
+            </h2>
+            <ToastContainer></ToastContainer>
          </div>
-         <h2 className={`${toggle ? 'inline' : 'hidden'} text-xl bg-teal-200 p-5 rounded  `}>
-            {' '}
-            Answer: {correctAnswer}
-         </h2>
-         <ToastContainer></ToastContainer>
       </div>
    );
 };

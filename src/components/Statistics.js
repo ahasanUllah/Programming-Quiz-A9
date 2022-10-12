@@ -7,7 +7,7 @@ const Statistics = () => {
    const { data } = useContext(QuizContext);
    console.log(data);
    return (
-      <div className="mx-auto flex justify-center w-full h-full mt-10">
+      <div className="mx-auto flex justify-center w-full h-full mt-52 md:mt-10">
          <ResponsiveContainer width="80%" height={500}>
             <LineChart width="80%" height={500} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
                <Line type="monotone" dataKey="total" stroke="#8884d8" />
