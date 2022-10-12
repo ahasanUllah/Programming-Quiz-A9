@@ -34,14 +34,14 @@ const Header = () => {
                      </Link>
                   </li>
                   <li>
-                     <a
-                        href="/"
+                     <Link
+                        to="/blog"
                         aria-label="Product pricing"
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                      >
                         Blog
-                     </a>
+                     </Link>
                   </li>
                   <li>
                      <Link
