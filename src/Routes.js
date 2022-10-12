@@ -4,6 +4,7 @@ import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Root from './components/Root';
+import Statistics from './components/Statistics';
 
 export const router = createBrowserRouter([
    {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
             element: <Quiz></Quiz>,
             loader: async ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
          },
+         { path: '/statistics', element: <Statistics></Statistics> },
       ],
    },
 ]);
