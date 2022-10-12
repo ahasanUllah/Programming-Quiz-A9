@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Questions from './Questions';
 import { ScoreContext } from './Root';
 
 const Quiz = () => {
-   const [score, setScore] = useContext(ScoreContext);
+   const [score] = useContext(ScoreContext);
    const { data } = useLoaderData();
-   const { total, name, id, questions } = data;
+   const { name, questions } = data;
    console.log(data.length);
    return (
       <div>

@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { ToastContainer } from 'react-toastify';
+import React from 'react';
 
 const Option = ({ option, handleOption, question }) => {
-   const { options, id, correctAnswer } = question;
    console.log(question);
 
    return (
